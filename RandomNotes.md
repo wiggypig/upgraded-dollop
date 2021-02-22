@@ -24,7 +24,27 @@ site: generates site documentation for this project
 Phases are actually mapped to underlying goals. The specific goals executed per phase is dependant upon the packaging type of the project. For example, package executes jar:jar if the project type is a JAR, and war:war if the project type is - you guessed it - a WAR.
 
 An interesting thing to note is that phases and goals may be executed in sequence.
+Building a Maven Project
+```
+    mvn package
+ ```
+ A fresh build of a project generating all packaged outputs and the documentation site and deploying it to a repository manager could be done with
+```
+    mvn clean deploy site-deploy
+```    
+Just creating the package and installing it in the local repository for re-use from other projects can be done with
+```
+    mvn verify
+```
+This is the most common build invocation for a Maven project.
 
+When not working with a project, and in some other use cases, you might want to invoke a specific task implemented by a part of Maven - this is called a goal of a plugin. E.g.:
+```
+    mvn archetype:generate
+or
+
+    mvn checkstyle:check
+```
 ### developers typically use the node package manager (npm) to install software for coding
 ``` 
     npm install <softwae package name>
@@ -32,6 +52,10 @@ An interesting thing to note is that phases and goals may be executed in sequenc
 ```
 ### Sys Admin typically use other deployment tools [ local shares, servers, msi downloads, chocolately]
 ``` 
+
+
+
+
     choco install <software package name>
 ```
 
