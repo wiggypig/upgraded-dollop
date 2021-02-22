@@ -1,12 +1,12 @@
-#Random Notes
+# Random Notes
 
-##command CLI to find app using port 8080
+## command CLI to find app using port 8080
 ``` netstat -ano | findstr 8080 ```
 
-# Password Manager
+#### Password Manager
 Bitwarden 
 
-# Maven Phases
+## Maven Phases
 Although hardly a comprehensive list, these are the most common default lifecycle phases executed.
 
 validate: validate the project is correct and all necessary information is available
@@ -25,12 +25,14 @@ Phases are actually mapped to underlying goals. The specific goals executed per 
 
 An interesting thing to note is that phases and goals may be executed in sequence.
 
-# developers ttypically use the node package manager (npm) to install software for coding
-``` npm install
-    npm start
-    ```
-# Sys Admin typically use other deployment tools [ local shares, servers, msi downloads, chocolately]
-``` choco install
+### developers typically use the node package manager (npm) to install software for coding
+``` 
+    npm install <softwae package name>
+    npm start 
+```
+### Sys Admin typically use other deployment tools [ local shares, servers, msi downloads, chocolately]
+``` 
+    choco install <software package name>
 ```
 
 
